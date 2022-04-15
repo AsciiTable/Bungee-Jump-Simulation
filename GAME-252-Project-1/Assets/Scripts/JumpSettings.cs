@@ -35,6 +35,12 @@ public class JumpSettings : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        topPlatform = GameObject.FindWithTag("TopPlatform");
+        friend = GameObject.FindWithTag("Friend");
+        friendRb = friend.GetComponent<Rigidbody>();
+        bungeeCord = topPlatform.GetComponent<SpringJoint>();
+        windForce = friend.GetComponent<WindForce>();
+
         //Set Platform Height and Friend height simultaneously
         topPlatform.transform.position = new Vector3(topPlatform.transform.position.x, platformHeight, topPlatform.transform.position.z);
         friend.transform.position = new Vector3(friend.transform.position.x, platformHeight, friend.transform.position.z);
