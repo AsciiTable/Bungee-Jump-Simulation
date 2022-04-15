@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2272426689921865616}
   - component: {fileID: 2272426689921865644}
   - component: {fileID: 2272426689921865647}
+  - component: {fileID: 742131045269277882}
   m_Layer: 0
   m_Name: Friend
   m_TagString: Untagged
@@ -130,4 +131,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NotHit: {fileID: 2100000, guid: 05eeb24677ee59e4faec4d2e33d37598, type: 2}
   Hit: {fileID: 2100000, guid: 8ac1304da0c375a4d975667620c52250, type: 2}
-  minHitVisualDuration: 2
+  minHitVisualDuration: 1.5
+--- !u!114 &742131045269277882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2272426689921865617}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fde3af8d0d7b204db6a45a973adf237, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  windDirection: {x: 0, y: 0, z: 1}
+  windStrength: 250
+  timeBetweenBlows: 3
