@@ -9,11 +9,12 @@ public class CharacterHitController : MonoBehaviour
     public float minHitVisualDuration;
     private float hitTimer = 0.0f;
     private bool isHit = false;
+    private bool hasExited = true;
 
     // Update is called once per frame
     void Update()
     {
-        if (isHit) {
+        if (isHit && hasExited) {
             if (Time.time - hitTimer >= minHitVisualDuration)
             {
                 isHit = false;
@@ -27,6 +28,7 @@ public class CharacterHitController : MonoBehaviour
         isHit = true;
         hitTimer = Time.time;
         gameObject.GetComponent<MeshRenderer>().material = Hit;
+        hasExited = false;
     }
 
     private void OnCollisionExit(Collision collision)
@@ -34,6 +36,8 @@ public class CharacterHitController : MonoBehaviour
         if (Time.time - hitTimer >= minHitVisualDuration) {
             isHit = false;
             gameObject.GetComponent<MeshRenderer>().material = NotHit;
+            return;
         }
+        hasExited = true;
     }
 }
