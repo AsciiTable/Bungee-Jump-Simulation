@@ -191,18 +191,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 742131045269277882, guid: c621ef3b517965b48956e09e9d25826d, type: 3}
-      propertyPath: windStrength
-      value: 300
-      objectReference: {fileID: 0}
-    - target: {fileID: 742131045269277882, guid: c621ef3b517965b48956e09e9d25826d, type: 3}
-      propertyPath: windDirection.x
-      value: 0.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 742131045269277882, guid: c621ef3b517965b48956e09e9d25826d, type: 3}
-      propertyPath: windDirection.z
-      value: 0.2
-      objectReference: {fileID: 0}
     - target: {fileID: 2272426689921865617, guid: c621ef3b517965b48956e09e9d25826d, type: 3}
       propertyPath: m_Name
       value: Friend
@@ -645,7 +633,7 @@ SpringJoint:
   m_AutoConfigureConnectedAnchor: 0
   m_ConnectedAnchor: {x: 0, y: -0.7627602, z: 0}
   serializedVersion: 2
-  m_Spring: 10
+  m_Spring: 1
   m_Damper: 0.2
   m_MinDistance: 0
   m_MaxDistance: 20
@@ -733,3 +721,75 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 83ba751d4466cba47be4960f0e4cc6e8, type: 3}
+--- !u!1 &1823542653
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1823542655}
+  - component: {fileID: 1823542654}
+  m_Layer: 0
+  m_Name: JumpSettings
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1823542654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1823542653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ded4517556011834cbf586f0d8de9e4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  topPlatform: {fileID: 979822034}
+  friend: {fileID: 2139813374}
+  friendRb: {fileID: 216756618}
+  bungeeCord: {fileID: 979822039}
+  windForce: {fileID: 2139813375}
+  platformHeight: 45
+  friendMass: 90
+  springConstant: 90
+  cordLength: 30
+  windDirection: {x: 10, y: 0, z: 0}
+  windStrength: 150
+  timeBetweenBlows: 1
+--- !u!4 &1823542655
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1823542653}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -33.124466, y: 94.53604, z: 39.85573}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2139813374 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2272426689921865617, guid: c621ef3b517965b48956e09e9d25826d, type: 3}
+  m_PrefabInstance: {fileID: 216756617}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2139813375 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 742131045269277882, guid: c621ef3b517965b48956e09e9d25826d, type: 3}
+  m_PrefabInstance: {fileID: 216756617}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2139813374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fde3af8d0d7b204db6a45a973adf237, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

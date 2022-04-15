@@ -144,6 +144,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fde3af8d0d7b204db6a45a973adf237, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  windDirection: {x: 0, y: 0, z: 1}
-  windStrength: 250
-  timeBetweenBlows: 3
+  windDirection: {x: 0, y: 0, z: 0}
+  windStrength: 0
+  timeBetweenBlows: 0
