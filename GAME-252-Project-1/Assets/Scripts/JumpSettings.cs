@@ -28,9 +28,9 @@ public class JumpSettings : MonoBehaviour
     public float springConstant = 90f;
     public float cordLength = 30f;
     
-    public Vector3 windDirection = new Vector3(10,0,0);
-    public float windStrength = 150f;
-    public float timeBetweenBlows = 1f;
+    public Vector3 windDirection = new Vector3(1,0,0);
+    public float windStrength = 300f;
+    public float timeBetweenBlows = 3f;
 
     // Start is called before the first frame update
     void Start()
